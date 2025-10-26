@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Tomato",
+    "price": 20,
+    "description": "Fresh and juicy",
+    "image":"/images/veg1.jpg"
+  },
+  {
+    "name": "Potato",
+    "price": 15,
+    "description": "Organic and clean",
+        "image":"/images/veg2.jpg"
+
+  },
+  {
+    "name": "Carrot",
+    "price": 30,
+    "description": "Sweet and crunchy",
+    "image":"/images/veg1.jpg"
+  }
+]
