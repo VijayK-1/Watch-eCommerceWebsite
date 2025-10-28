@@ -12,7 +12,7 @@ function Favorite() {
     const [values,setValues]=useState([])
     const fetchFavorite=async()=>{
       let token=localStorage.getItem('token')
-      const res=await axios.get('http://localhost:5000/api/fav/',{
+      const res=await axios.get('/api/fav/',{
       headers: { Authorization: `Bearer ${token}`}
     })
       setValues(res.data)
@@ -20,7 +20,7 @@ function Favorite() {
  const removeFav = async (productId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/fav/remove', { productId }, {
+      await axios.post('/api/fav/remove', { productId }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchFavorite();

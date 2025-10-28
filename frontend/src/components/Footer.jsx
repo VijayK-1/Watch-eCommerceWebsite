@@ -30,7 +30,7 @@ function Footer() {
     e.preventDefault()
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/feedback/msg',{
+      await axios.post('/api/feedback/msg',{
         firstname:form.firstname,
         lastname:form.lastname,
         email:form.email,
