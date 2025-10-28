@@ -3,7 +3,6 @@ import aboutBan from '../assets/aboutBan.jpg'
 import aboAlt from '../assets/aboAlt.jpg'
 import abogold from '../assets/abogold.jpg'
 import aboutResearch from '../assets/aboutResearch.png'
-import aboutfoot from '../assets/aboutFoot.JPG'
 import Footer from './Footer'
 
 function About() {
@@ -89,7 +88,7 @@ function About() {
             </div>
           </div>
             <div className=''>
-                <img src={aboutfoot} alt="" className='object-cover w-full md:h-120 h-100' />
+                
             </div>
         </div>
        <Footer/>
