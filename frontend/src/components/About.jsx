@@ -3,7 +3,7 @@ import aboutBan from '../assets/aboutBan.jpg'
 import aboAlt from '../assets/aboAlt.jpg'
 import abogold from '../assets/abogold.jpg'
 import aboutResearch from '../assets/aboutResearch.png'
-import aboutfoot from '../assets/aboutfoot.jpg'
+import aboutfoot from '../assets/aboutFoot.JPG'
 import Footer from './Footer'
 
 function About() {
