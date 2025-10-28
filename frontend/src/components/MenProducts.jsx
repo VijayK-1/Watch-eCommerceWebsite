@@ -66,7 +66,7 @@ import 'aos/dist/aos.css';
 function MenProducts() {
   const handleAdd = async (item) => {
     const token = localStorage.getItem('token');
-    await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/cart/add', {
+    await axios.post('http://localhost:5000/api/cart/add', {
       productId: item.text,
       name: item.text,
       price: item.price,
@@ -87,7 +87,7 @@ function MenProducts() {
   const addToFavotite=async(item)=>{
         const token = localStorage.getItem('token');
        try {
-    await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/fav/addFav',{
+    await axios.post('http://localhost:5000/api/fav/addFav',{
       productId:item.text,
       image:item.image,
       name:item.text,

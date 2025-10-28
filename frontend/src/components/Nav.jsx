@@ -12,7 +12,6 @@ function Nav() {
   const getStyle=(btn)=>({
     color : active=== btn ? 'black' : 'gray',
     borderBottom : active === btn ? '2px solid blue' : 'none',
-    transform : active === btn ? 'scale(1.1)' : 'none',
   })
   return (
     <>
@@ -44,18 +43,27 @@ function Nav() {
       {dropDown && (
        <div className=''>
          <div className='relative'>
-         <div className='absolute bg-gray-100 h-50 w-100 font-[600]'>
-         <ul className='p-6 flex flex-col gap-5'>
-          <li className='text-[13px] sm:text-[15px]' onClick={()=>setActive('btn1')} style={getStyle('btn1')} >
+         <div className='absolute bg-gray-100 h-70 sm:h-50 w-60 font-[600]'>
+         <ul className='sm:p-6 p-2 flex flex-col gap-5 tracking-widest'>
+          <li className='text-[13px] sm:text-[14px]  p-1' onClick={()=>setActive('btn1')} style={getStyle('btn1')} >
           <Link className='hover:text-black' to="/home">Home</Link>
           </li>
-         <li className='text-[13px] sm:text-[15px]' onClick={()=>setActive('btn2')} style={getStyle('btn2')}>
+         <li className='text-[13px] sm:text-[14px] p-1' onClick={()=>setActive('btn2')} style={getStyle('btn2')}>
           <Link className='hover:text-black ' to="/shop">Shop 
           <sup><FaFireAlt className='inline text-red-500 animate-bounce'/></sup> 
           </Link>
           </li>
-         <li className='text-[13px] sm:text-[15px]' onClick={()=>setActive('btn3')} style={getStyle('btn3')}>
+         <li className='text-[13px] sm:text-[14px]  p-1' onClick={()=>setActive('btn3')} style={getStyle('btn3')}>
           <Link className='hover:text-black' to="/about">About</Link>
+          </li>
+         <li className='text-[13px] sm:text-[14px] block sm:hidden p-1' onClick={()=>setActive('btn4')} style={getStyle('btn4')}>
+            <Link className='hover:text-black' to="/fav">Wishlist</Link>
+          </li>
+         <li className='text-[13px] sm:text-[14px] block sm:hidden p-1' onClick={()=>setActive('btn5')} style={getStyle('btn5')}>
+          <Link className='hover:text-black' to="/cart">Cart</Link>
+          </li>
+         <li className='text-[13px] sm:text-[14px] block sm:hidden p-1' onClick={()=>setActive('btn6')} style={getStyle('btn6')}>
+          <Link className='hover:text-black' to="/order">Orders</Link>
           </li>
          </ul>
          </div>
