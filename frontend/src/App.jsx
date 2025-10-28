@@ -1,7 +1,6 @@
 import './App.css'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import LoginRegister from './components/LoginRegister'
-import ProductPage from './components/ProductPage'
 import CartPage from './components/CartPage'
 import PlaceOrder from './components/PlaceOrder'
 import Home from './components/Home'
