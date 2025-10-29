@@ -12,7 +12,7 @@ function Favorite() {
     const [values,setValues]=useState([])
     const fetchFavorite=async()=>{
       let token=localStorage.getItem('token')
-      const res=await axios.get('https://watch-ecommercewebsite-frontend.onrender.com/api/fav/',{
+      const res=await axios.get('https://watch-ecommercewebsite-backend.onrender.com/api/fav/',{
       headers: { Authorization: `Bearer ${token}`}
     })
       console.log(res.data)
