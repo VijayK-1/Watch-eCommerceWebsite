@@ -15,6 +15,7 @@ function Favorite() {
       const res=await axios.get('https://watch-ecommercewebsite-frontend.onrender.com/api/fav/',{
       headers: { Authorization: `Bearer ${token}`}
     })
+      console.log(res.data)
       setValues(res.data)
     }
  const removeFav = async (productId) => {
