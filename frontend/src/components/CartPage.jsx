@@ -5,11 +5,12 @@ import { RiDeleteBin7Line } from "react-icons/ri";
 
 function CartPage() {
   const navigate = useNavigate();
+  const API = import.meta.env.VITE_API_BASE_URL;
   const [cart, setCart] = useState([]);
 
   const fetchCart = async () => {
     const token = localStorage.getItem('token');
-    const res = await axios.get('https://watch-ecommercewebsite-backend.onrender.com/api/cart', {
+    const res = await axios.get(`${API}/api/cart`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     setCart(res.data);
