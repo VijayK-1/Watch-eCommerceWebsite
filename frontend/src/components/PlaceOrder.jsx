@@ -57,7 +57,7 @@ function PlaceOrder() {
         your orders 🎀
       </div>
     <div className='bg-gray-100 pb-5'>
-       {cart.map(item => (
+       {Array.isArray(cart) &&cart.map(item => (
          <div key={item.productId} className='overflow-hidden my-1 grid grid-cols-3 lg:gap-40 md:gap-30 sm:gap-15 lg:mx-40 md:mx-30 sm:mx-15 border-b-1 pb-2'>
             <div className='flex justity-center items-center'>
                <img 
