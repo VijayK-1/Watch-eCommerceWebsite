@@ -88,7 +88,7 @@ function About() {
             </div>
           </div>
             <div className=''>
-                
+                <img src={aboutResearch} alt="" className='object-cover w-full md:h-120 h-100' />
             </div>
         </div>
        <Footer/>
