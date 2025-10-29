@@ -25,7 +25,7 @@ function Favorite() {
       });
       fetchFavorite();
     } catch (err) {
-      console.error("Failed to remove item", err);
+      console.error("Failed to remove item");
     }
   };
   useEffect(()=>{fetchFavorite()},[])
