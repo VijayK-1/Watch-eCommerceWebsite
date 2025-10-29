@@ -15,6 +15,7 @@ function CartPage() {
     });
     setCart(res.data);
   };
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const updateQty = async (productId, type) => {
     const token = localStorage.getItem('token');
     await axios.post('/api/cart/update', { productId, type }, {
@@ -34,7 +35,6 @@ function CartPage() {
     }
   };
   useEffect(() => { fetchCart(); }, []);
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   return (
     <div>
     <div className='grid grid-cols-1 lg:grid-cols-2 mt-10 lg:mx-20 mx-5'>
@@ -42,7 +42,7 @@ function CartPage() {
         <div className='text-2xl mb-3 border-b-2 border-gray-300 pb-4 tracking-widest'>
           My cart
         </div>
-      {Array.isArray(cart) &&cart.map(item => (
+      {cart.map(item => (
         <div key={item.productId} 
         className='flex sm:gap-20 items-center lg:justify-start justify-evenly mb-4 border-b-2 pb-3 border-gray-300 hover:scale-95 transtion-all duration-500  '>
           <div>
