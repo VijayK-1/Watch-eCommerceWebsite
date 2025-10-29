@@ -30,7 +30,7 @@ function Footer() {
     e.preventDefault()
     try {
       const token = localStorage.getItem('token');
-      await axios.post('/api/feedback/msg',{
+      await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/feedback/msg',{
         firstname:form.firstname,
         lastname:form.lastname,
         email:form.email,
