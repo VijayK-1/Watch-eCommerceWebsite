@@ -14,7 +14,7 @@ function PlaceOrder() {
   useEffect(() => {
     const fetchCart = async () => {
       const token = localStorage.getItem('token');
-      const res = await axios.get('/api/cart',{
+      const res = await axios.get('https://watch-ecommercewebsite-backend.onrender.com/api/cart',{
         headers: { Authorization: `Bearer ${token}`}
       });
       setCart(res.data);
@@ -35,7 +35,7 @@ function PlaceOrder() {
   }
   try {
     const token = localStorage.getItem('token');
-    await axios.post("/api/orders/place-order", {
+    await axios.post("https://watch-ecommercewebsite-backend.onrender.com/api/orders/place-order", {
       name: form.name,
       address: form.address,
       payment: form.payment
