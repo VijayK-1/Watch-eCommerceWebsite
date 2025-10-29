@@ -9,7 +9,7 @@ function CartPage() {
 
   const fetchCart = async () => {
     const token = localStorage.getItem('token');
-    const res = await axios.get('/api/cart', {
+    const res = await axios.get('https://watch-ecommercewebsite-backend.onrender.com/api/cart', {
       headers: { Authorization: `Bearer ${token}` }
     });
     setCart(res.data);
