@@ -39,7 +39,7 @@ function Favorite() {
             <img src={love1} alt="" className='w-full object-cover h-50' />
             <div>
               <p className='mx-10 text-xl font-[600] my-5'>My Wishlist</p>
-              {values.map((p,index)=>(
+              {Array.isArray(values) &&values.map((p,index)=>(
                 <div key={index} className='flex justify-center sm:mx-10 mx-4 items-center my-3 grid grid-cols-3 border-b-2 pb-5 border-gray-400'>
                     <div>
                       <img src={p.image} alt="images" className='h-25 object-contain ' />
