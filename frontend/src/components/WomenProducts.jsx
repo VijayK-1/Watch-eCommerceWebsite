@@ -41,7 +41,7 @@ const womenCollection=[
 function WomenProducts() {
     const handleAdd = async (item) => {
     const token = localStorage.getItem('token');
-    await axios.post('/api/cart/add', {
+    await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/cart/add', {
       productId: item.text,
       name: item.text,
       price: item.price,
@@ -62,7 +62,7 @@ function WomenProducts() {
   const addToFavotite=async(item)=>{
         const token = localStorage.getItem('token');
        try {
-    await axios.post('/api/fav/addFav',{
+    await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/fav/addFav',{
       productId:item.text,
       image:item.src,
       name:item.text,
