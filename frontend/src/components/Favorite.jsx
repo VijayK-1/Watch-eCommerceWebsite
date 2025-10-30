@@ -21,7 +21,7 @@ function Favorite() {
  const removeFav = async (productId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('/api/fav/remove', { productId }, {
+      await axios.post('https://watch-ecommercewebsite-backend.onrender.com/api/fav/remove', { productId }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchFavorite();
